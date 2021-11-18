@@ -12,7 +12,7 @@ def movie():
         return render_template('index.html', suggests=c.execute("""
             SELECT ItemID, MovieTitle, ROUND(Rating, 1) FROM movies 
             ORDER BY Rating DESC
-            LIMIT 10 
+            LIMIT 5 
         """))
 
 @app.route("/sample")
